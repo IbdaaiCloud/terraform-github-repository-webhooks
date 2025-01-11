@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.3](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.2...v1.0.3) (2025-01-11)
+
+
+### Bug Fixes
+
+* update module source and version for GitHub Repository Webhook ([4bca8c9](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/4bca8c9ce22d8314aab2e9d118c3d5c96e59be36))
+
 ### [1.0.2](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.1...v1.0.2) (2025-01-11)
 
 
