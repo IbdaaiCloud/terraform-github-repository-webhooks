@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+permissions: write-all
+
 env:
   TERRAFORM_DOCS_VERSION: v0.16.0
 
