@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.1](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.0...v1.0.1) (2025-01-11)
+
+
+### Bug Fixes
+
+* update README links and improve table formatting ([25f2eac](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/25f2eace1aca8d0d63f603dc9e936325992355dd))
+
 ## 1.0.0 (2025-01-11)
 
 
