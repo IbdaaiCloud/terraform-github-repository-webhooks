@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.5](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.4...v1.0.5) (2025-01-11)
+
+
+### Bug Fixes
+
+* **docs:** enhance README formatting and add Terraform Registry badge ([cff395d](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/cff395dbfefeba0bbb097b4d321838343f448bf9))
+* **docs:** update image source and improve table formatting in README ([dc61f36](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/dc61f36561808ecad8c342081234c613399b10cb))
+
 ### [1.0.4](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.3...v1.0.4) (2025-01-11)
 
 
