@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.6](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.5...v1.0.6) (2025-01-11)
+
+
+### Bug Fixes
+
+* **pre-commit:** remove terraform_docs hook and its arguments ([18fbf28](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/18fbf287d5bbc329bb1f11149cd04eba6049e042))
+
 ### [1.0.5](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.4...v1.0.5) (2025-01-11)
 
 
