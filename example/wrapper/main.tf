@@ -2,7 +2,7 @@
 # GitHub Repository Webhook Module
 #---------------------------------------------------
 module "github_repository_webhook_wrapper" {
-  source = "../../wrappers"
+  source = "../../wrapper"
 
   defaults = {
     repository_webhook_enabled = true
