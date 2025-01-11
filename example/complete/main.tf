@@ -2,7 +2,8 @@
 # GitHub Repository Webhook Module
 #---------------------------------------------------
 module "github_repository_webhook" {
-  source = "../../"
+  source  = "IbdaaiCloud/repository-webhooks/github"
+  version = "1.0.2"
 
   repository_webhook_enabled          = true
   repository_workflow_repository_name = "terraform-github-repository-webhooks"
