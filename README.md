@@ -3,22 +3,22 @@
 </div>
 
 <div align="center">
-  <a href="https://img.shields.io/badge/github-%23181717.svg?style=for-the-badge&logo=github&logoColor=white">
+  <a href="https://github.com/IbdaaiCloud/terraform-github-repository-webhooks">
     <img src="https://img.shields.io/badge/github-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
-  <a href="https://img.shields.io/github/v/release/IbdaaiCloud/terraform-github-repository-webhooks?include_prereleases&sort=date&style=for-the-badge">
+  <a href="https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/releases">
     <img src="https://img.shields.io/github/v/release/IbdaaiCloud/terraform-github-repository-webhooks?include_prereleases&sort=date&style=for-the-badge" alt="GitHub Releases"/>
   </a>
-  <a href="https://img.shields.io/github/stars/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge">
+  <a href="https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/stargazers">
     <img src="https://img.shields.io/github/stars/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge" alt="GitHub Stars"/>
   </a>
-  <a href="https://img.shields.io/github/forks/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge">
+  <a href="https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/forks">
     <img src="https://img.shields.io/github/forks/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge" alt="GitHub Forks"/>
   </a>
-  <a href="https://img.shields.io/github/issues/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge">
+  <a href="https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/issues">
     <img src="https://img.shields.io/github/issues/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge" alt="GitHub Issues"/>
   </a>
-  <a href="https://img.shields.io/github/license/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge">
+  <a href="LICENSE">
     <img src="https://img.shields.io/github/license/IbdaaiCloud/terraform-github-repository-webhooks.svg?style=for-the-badge" alt="GitHub License"/>
   </a>
 </div>
