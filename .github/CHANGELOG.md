@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.4](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.3...v1.0.4) (2025-01-11)
+
+
+### Bug Fixes
+
+* update workflows to use Harden Runner for enhanced security and update action versions ([a39c141](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/a39c1413420a0f0643c30d17aec7c9cec8568ca1))
+
 ### [1.0.3](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.2...v1.0.3) (2025-01-11)
 
 
