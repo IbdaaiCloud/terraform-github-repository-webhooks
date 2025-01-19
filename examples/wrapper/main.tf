@@ -2,8 +2,7 @@
 # GitHub Repository Webhook Module
 #---------------------------------------------------
 module "github_repository_webhook_wrapper" {
-  source  = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  version = "1.0.6"
+  source = "IbdaaiCloud/repository-webhooks/github//wrapper"
 
   defaults = {
     repository_webhook_enabled = true

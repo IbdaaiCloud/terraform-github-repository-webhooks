@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/IbdaaiCloud/terraform-github-repository-webhooks/refs/heads/main/.github/assets/img/header.svg" alt="IbdaaiCloud" />
+  <img src="https://raw.githubusercontent.com/IbdaaiCloud/terraform-github-repository-webhooks/refs/heads/main/.github/assets/img/banner.svg" alt="IbdaaiCloud - Terraform GitHub Repository Webhooks" />
 </div>
 
 <div align="center">
@@ -27,6 +27,111 @@
 </div>
 
 # Terraform GitHub Repository Webhooks
+
+## Description
+
+This repository contains Terraform modules for managing GitHub repository webhooks. The module allows you to create, update, and delete GitHub repository webhooks.
+
+## Usage
+
+### Module
+
+The following example demonstrates how to use the module to create a GitHub repository webhook.
+
+```hcl
+module "repository_webhooks" {
+  source  = "IbdaaiCloud/repository-webhooks/github"
+  # version = "x.x.x"
+
+  repository_workflow_repository_name = "IbdaaiCloud/terraform-github-repository-webhooks"
+  repository_webhook_enabled          = true
+  repository_webhook_active           = true
+  repository_webhook_events           = ["push"]
+  repository_webhook_configuration    = [
+    {
+      url          = "https://example.com/webhook"
+      content_type = "json"
+      secret       = "supersecret"
+      insecure_ssl = false
+    }
+  ]
+}
+```
+
+> [!WARNING]
+> The `version` argument is omitted in the example's `source` block. It is strongly recommended to specify a version to ensure stability and avoid unexpected changes due to future updates. Use a version constraint like `version = "~> x.x.x"` in your project to lock the module to a compatible release.
+
+### Wrapper Module
+
+The wrapper module provided here offers a convenient solution for managing multiple instances of the repository webhook module in scenarios where the native `for_each` feature introduced in `Terraform 0.13+` cannot be utilized, such as when working with Terragrunt.
+
+This approach allows you to consolidate configurations into a single Terragrunt file, effectively managing multiple resources without duplicating `terragrunt.hcl` files for each instance of the module.
+
+The wrapper is designed purely as a utility for orchestrating multiple modules and does not add any extra functionality beyond simplifying the configuration process.
+
+#### Example Usage with Terraform
+
+```hcl
+module "repository_webhook_wrapper" {
+  source = "IbdaaiCloud/repository-webhooks/github//wrapper"
+  # version = "x.x.x"
+
+  defaults = {
+    repository_webhook_enabled = true
+    repository_webhook_configuration = [{
+      url          = "https://example.com"
+      content_type = "json"
+      secret       = local.github_token
+      insecure_ssl = true
+    }]
+  }
+
+  items = {
+    "repository-example-1" = {
+      # omitted... can be any arguments supported by the module
+    }
+    "repository-example-2" = {
+      # omitted... can be any arguments supported by the module
+    }
+    "repository-example-3" = {
+      # omitted... can be any arguments supported by the module
+    }
+  }
+}
+```
+
+#### Example Usage with Terragrunt
+
+```hcl
+terraform {
+  source = "IbdaaiCloud/repository-webhooks/github//wrapper"
+  # version = "x.x.x"
+}
+
+inputs = {
+  defaults = {
+    repository_webhook_enabled = true
+    repository_webhook_configuration = [{
+      url          = "https://example.com"
+      content_type = "json"
+      secret       = local.github_token
+      insecure_ssl = true
+    }]
+  }
+
+  items = {
+    "repository-example-1" = {
+      # omitted... can be any arguments supported by the module
+    }
+    "repository-example-2" = {
+      # omitted... can be any arguments supported by the module
+    }
+    "repository-example-3" = {
+      # omitted... can be any arguments supported by the module
+    }
+  }
+}
+```
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -68,3 +173,11 @@ No modules.
 |------|-------------|
 | <a name="output_repository_webhook_url"></a> [repository\_webhook\_url](#output\_repository\_webhook\_url) | URL of the webhook. This is a sensitive attribute because it may include basic auth credentials. |
 <!-- END_TF_DOCS -->
+
+## License
+
+This work is licensed under MIT License. See [LICENSE](LICENSE) for full details.
+
+## Authors
+
+This module is maintained by the IbdaaiCloud team.
