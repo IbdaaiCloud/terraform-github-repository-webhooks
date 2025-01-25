@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.6...v1.1.0) (2025-01-19)
+
+
+### Features
+
+* add GitHub provider and webhook module examples ([da82ebc](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/da82ebc59541a5e8d9ea74321229e414dfd59020))
+* **templates:** add bug report and feature request issue templates ([e3dac9d](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/commit/e3dac9dc674d57d78b72798a5aeb2b84adb00986))
+
 ### [1.0.6](https://github.com/IbdaaiCloud/terraform-github-repository-webhooks/compare/v1.0.5...v1.0.6) (2025-01-11)
 
 
