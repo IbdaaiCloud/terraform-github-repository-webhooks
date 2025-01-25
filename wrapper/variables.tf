@@ -1,11 +1,15 @@
 variable "defaults" {
-  description = "Map of default values which will be used for each item."
+  description = <<EOF
+  Map of default values which will be used for each item.
+EOF
   type        = any
   default     = {}
 }
 
 variable "items" {
-  description = "Maps of items to create a wrapper from. Values are passed through to the module."
+  description = <<EOF
+  Maps of items to create a wrapper from. Values are passed through to the module.
+EOF
   type        = any
   default     = {}
 }

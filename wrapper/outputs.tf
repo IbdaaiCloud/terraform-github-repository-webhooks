@@ -1,4 +1,6 @@
 output "wrapper" {
-  description = "Map of outputs of a wrapper."
+  description = <<EOF
+  Map of outputs of a wrapper.
+EOF
   value       = module.wrapper
 }
