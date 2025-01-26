@@ -5,7 +5,7 @@ module "github_repository_webhook_wrapper" {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
 
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"

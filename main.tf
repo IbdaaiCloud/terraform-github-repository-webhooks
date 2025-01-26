@@ -5,7 +5,7 @@
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook
 
 resource "github_repository_webhook" "this" {
-  count = var.repository_webhook_enabled ? 1 : 0
+  count = var.enable_repository_webhook_creation ? 1 : 0
 
   repository = var.repository_workflow_repository_name
   events     = var.repository_webhook_events

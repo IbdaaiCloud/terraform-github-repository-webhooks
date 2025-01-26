@@ -2,7 +2,7 @@
 # Variables Environment
 #---------------------------------------------------
 
-variable "repository_webhook_enabled" {
+variable "enable_repository_webhook_creation" {
   type        = bool
   description = <<EOF
   (Required) Whether the webhook should be enabled. Defaults to false. If set to true, the webhook will be created.
