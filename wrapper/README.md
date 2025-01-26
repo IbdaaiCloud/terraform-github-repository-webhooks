@@ -43,10 +43,10 @@ The wrapper is designed purely as a utility for orchestrating multiple modules a
 ```hcl
 module "repository_webhook_wrapper" {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  # version = "x.x.x"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"
@@ -74,12 +74,12 @@ module "repository_webhook_wrapper" {
 ```hcl
 terraform {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  # version = "x.x.x"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 }
 
 inputs = {
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"
@@ -106,12 +106,13 @@ inputs = {
 > The `version` argument is omitted in the example's `source` block. It is strongly recommended to specify a version to ensure stability and avoid unexpected changes due to future updates. Use a version constraint like `version = "~> x.x.x"` in your project to lock the module to a compatible release.
 
 <!-- BEGIN_TF_DOCS -->
+
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | >= 6.4.0 |
+| Name                                                                     | Version   |
+| ------------------------------------------------------------------------ | --------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13.0 |
+| <a name="requirement_github"></a> [github](#requirement_github)          | >= 6.4.0  |
 
 ## Providers
 
@@ -119,9 +120,9 @@ No providers.
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_wrapper"></a> [wrapper](#module\_wrapper) | ../ | n/a |
+| Name                                                     | Source | Version |
+| -------------------------------------------------------- | ------ | ------- |
+| <a name="module_wrapper"></a> [wrapper](#module_wrapper) | ../    | n/a     |
 
 ## Resources
 
@@ -129,14 +130,15 @@ No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_defaults"></a> [defaults](#input\_defaults) | Map of default values which will be used for each item. | `any` | `{}` | no |
-| <a name="input_items"></a> [items](#input\_items) | Maps of items to create a wrapper from. Values are passed through to the module. | `any` | `{}` | no |
+| Name                                                      | Description                                                                      | Type  | Default | Required |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------- | ----- | ------- | :------: |
+| <a name="input_defaults"></a> [defaults](#input_defaults) | Map of default values which will be used for each item.                          | `any` | `{}`    |    no    |
+| <a name="input_items"></a> [items](#input_items)          | Maps of items to create a wrapper from. Values are passed through to the module. | `any` | `{}`    |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_wrapper"></a> [wrapper](#output\_wrapper) | Map of outputs of a wrapper. |
+| Name                                                     | Description                  |
+| -------------------------------------------------------- | ---------------------------- |
+| <a name="output_wrapper"></a> [wrapper](#output_wrapper) | Map of outputs of a wrapper. |
+
 <!-- END_TF_DOCS -->
