@@ -43,10 +43,10 @@ The wrapper is designed purely as a utility for orchestrating multiple modules a
 ```hcl
 module "repository_webhook_wrapper" {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  # version = "x.x.x"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"
@@ -74,12 +74,12 @@ module "repository_webhook_wrapper" {
 ```hcl
 terraform {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  # version = "x.x.x"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 }
 
 inputs = {
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"

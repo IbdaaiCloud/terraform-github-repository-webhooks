@@ -39,23 +39,22 @@ This repository contains Terraform modules for managing GitHub repository webhoo
 The following example demonstrates how to use the module to create a GitHub repository webhook.
 
 ```hcl
-module "repository_webhooks" {
-  source  = "IbdaaiCloud/repository-webhooks/github"
-  # version = "x.x.x"
+module "github_repository_webhook" {
+  source = "IbdaaiCloud/repository-webhooks/github"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 
-  repository_workflow_repository_name = "IbdaaiCloud/terraform-github-repository-webhooks"
-  repository_webhook_enabled          = true
-  repository_webhook_active           = true
+  enable_repository_webhook_creation  = true
+  repository_workflow_repository_name = "terraform-github-repository-webhooks"
   repository_webhook_events           = ["push"]
-  repository_webhook_configuration    = [
-    {
-      url          = "https://example.com/webhook"
-      content_type = "json"
-      secret       = "supersecret"
-      insecure_ssl = false
-    }
-  ]
+  repository_webhook_active           = true
+  repository_webhook_configuration = [{
+    url          = "https://example.com"
+    content_type = "json"
+    secret       = local.github_token
+    insecure_ssl = true
+  }]
 }
+
 ```
 
 > [!WARNING]
@@ -74,10 +73,10 @@ The wrapper is designed purely as a utility for orchestrating multiple modules a
 ```hcl
 module "repository_webhook_wrapper" {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  # version = "x.x.x"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"
@@ -105,12 +104,12 @@ module "repository_webhook_wrapper" {
 ```hcl
 terraform {
   source = "IbdaaiCloud/repository-webhooks/github//wrapper"
-  # version = "x.x.x"
+  # version = "x.y.z" # Use the latest version from the Terraform Registry
 }
 
 inputs = {
   defaults = {
-    repository_webhook_enabled = true
+    enable_repository_webhook_creation = true
     repository_webhook_configuration = [{
       url          = "https://example.com"
       content_type = "json"
