@@ -22,11 +22,6 @@ terraform.rc
 
 # Ignore test files
 test
-# but keep the Go test suite
-!/test/
-!/test/*.go
-!/test/go.mod
-!/test/go.sum
 tmp
 .tmp
 temp
